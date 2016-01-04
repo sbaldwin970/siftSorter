@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="siftSorter" lang="en">
+	<head>
+		<title>Sift / Sorter</title>
+		<!--BOOTSTRAP-->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet" type="text/css">
+		<!--//////////-->
+		<!--FONT AWESOME-->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!--//////////-->
+		<!--GOOGLE FONTS-->
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+		<!--//////////-->
+		<!--MAIN.CSS-->
+		<link href="main.css" rel="stylesheet" type="text/css">
+		<!--//////////-->
+	</head>
+
+
+	<body ng-controller="mainController">
+		<div class="container">
+			<!--HEADER-->
+			<div class="top">
+				<h1 class="title">w<i class="fa fa-search"></i>rd finder</h1>
+			</div>
+			<!--//////////-->
+			<div class="conContainer">
+				<!--BUTTONS-->
+				<div class="buttons">
+					<button class="sortButton" ng-click="sortDisplay()">sort</button>
+					<button class="siftButton" ng-click="siftDisplay()">sift</button>
+				</div>
+				<!--//////////-->
+				<!--WORD SEARCH-->
+				<input class="wordSearch" placeholder="..." ng-model="findWord"></input>
+				<!--//////////-->
+				<!--TEXT WINDOW-->
+				<textarea class="txtWindow" ng-model="articleTxt"></textarea>
+				<!--//////////-->
+				<!--RESULT DISPLAYS-->
+				<div class="sorterResult">
+					<div class="sortDisplay" ng-click="sortDisplay()">
+						<div class="sortResult">{{ sortResult }}</div>
+					</div>
+				</div>
+
+				<div class="sifterResult">
+					<div class="siftDisplay" ng-click="siftDisplay()">
+						<div class="siftResult">{{ siftResult }}</div>
+					</div>
+				</div>
+				<!--//////////-->
+			</div>
+		</div>
+
+
+
+		<!--ANGULAR-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular.min.js"></script>
+		<!--//////////-->
+		<!--MAIN.JS-->
+		<script src="main.js" type="text/javascript"></script>
+		<!--//////////-->
+	</body>
+</html>
